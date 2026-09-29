@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLS 210 · Presentation #1</title>
+<style>
+:root{--bg:#0b0d0f;--panel:#131619;--ink:#eef1f3;--muted:#8b959c;--line:#242a2e;--accent:#7fd1ae}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;display:flex;flex-direction:column}
+.slide{flex:1;display:none;padding:6vh 8vw;max-width:980px;margin:0 auto;width:100%;overflow-y:auto}
+.slide.active{display:block}
+.tag{font:12px/1 ui-monospace,Menlo,monospace;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem}
+.num{font:13px/1 ui-monospace,Menlo,monospace;color:var(--accent);margin-bottom:1.4rem}
+h1{font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.25;margin:.2rem 0 1.2rem;font-weight:600}
+h2{font-size:1.3rem;margin:0 0 1rem;font-weight:600}
+h3{font-size:1rem;margin:1.4rem 0 .4rem;color:var(--accent);font-weight:600}
+p{margin:.5rem 0}
+ul{margin:.4rem 0;padding-left:1.2rem}
+li{margin-bottom:.5rem}
+.scope{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.4rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:1rem 1.2rem}
+.card b{display:block;color:var(--muted);font:12px/1 ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem}
+table{width:100%;border-collapse:collapse;margin-top:1rem}
+th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line);vertical-align:top;font-size:.95rem}
+th{color:var(--muted);width:28%;font-weight:500}
+.src{margin:.9rem 0}
+.src .who{font-weight:600}
+.src .cite{color:var(--muted);font-size:.85rem;font-style:italic}
+.hyp{background:var(--panel);border-left:3px solid var(--accent);padding:1rem 1.2rem;margin:1rem 0;border-radius:4px}
+.refs{font-size:.9rem;line-height:1.65}
+.refs li{margin-bottom:.8rem;overflow-wrap:anywhere}
+.refs a{color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+@media (max-width:700px){.two{grid-template-columns:1fr}}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 8vw;border-top:1px solid var(--line);background:var(--panel)}
+.nav button{background:transparent;border:1px solid var(--line);color:var(--ink);padding:.5rem 1.1rem;border-radius:6px;cursor:pointer;font:14px/1 -apple-system,sans-serif}
+.nav button:hover{border-color:var(--accent);color:var(--accent)}
+.nav button:disabled{opacity:.3;cursor:default}
+.nav button:disabled:hover{border-color:var(--line);color:var(--ink)}
+.counter{color:var(--muted);font:13px/1 ui-monospace,Menlo,monospace}
+.fill{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<section class="slide active" data-i="0">
+<div class="tag">Title</div>
+<div class="num">01 / Research Design · Positivist Study</div>
+<h1>Elderly-care spending and youth-program funding in South Korean municipalities</h1>
+<p style="color:var(--muted)">PLS 210 · Presentation #1</p>
+</section>
+
+<section class="slide" data-i="1">
+<div class="tag">Question</div>
+<div class="num">02</div>
+<h2>Research Question</h2>
+<h1 style="font-size:1.4rem">"To what extent did rising municipal spending on elderly care reduce local government funding for youth programs in South Korea between 2015 and 2023?"</h1>
+<div class="scope">
+<div class="card"><b>Empirical</b>Asks what did happen to spending, not what should happen — answerable with budget data, not opinion.</div>
+<div class="card"><b>Population &amp; context</b>Municipal governments in South Korea, not governments broadly.</div>
+<div class="card"><b>Time window</b>2015–2023: the earliest years South Korea provides standardized, comparable integrated financial statements across all local governments (Ministry of Public Administration and Security), making this the first period a consistent municipal panel is possible.</div>
+<div class="card"><b>Answerable</b>Municipal-level spending data for both categories exist in Local Finance 365 across this window.</div>
+</div>
+</section>
+
+<section class="slide" data-i="2">
+<div class="tag">Where This Sits</div>
+<div class="num">03</div>
+<h2>Epistemology &amp; Positioning</h2>
+<table>
+<tr><th>Stance</th><td><b>Positivist</b></td></tr>
+<tr><th>Justification</th><td>Municipal budgets are observable, measurable facts. "To what extent" asks for the size of an effect, which requires measurement across many cases, not interpretation of meaning.</td></tr>
+<tr><th>Design</th><td>Statistical, large-N panel across municipalities — not a small-N comparative case study.</td></tr>
+<tr><th>What this rules out</th><td>An interpretivist approach would ask how officials experience or justify these trade-offs. That is a different question, set aside here.</td></tr>
+</table>
+</section>
+
+<section class="slide" data-i="3">
+<div class="tag">What It Adds</div>
+<div class="num">04</div>
+<h2>Contribution</h2>
+<ul>
+<li>The Korean fiscal literature explains how local budgets are divided <b>in general</b> — through decentralization (Kwon 2003; Park 2022), partisanship and transfers (Ha &amp; Lee 2022), and citizen participation (Lee &amp; Min 2023).</li>
+<li>None of it opens up the welfare category itself to test whether growth in one age-targeted line squeezes another.</li>
+<li>This project tests one specific, unexamined trade-off inside that literature: whether rising elderly-care spending came at the direct expense of youth-program funding, during a period of accelerating ageing.</li>
+</ul>
+</section>
+
+<section class="slide" data-i="4">
+<div class="tag">What We Already Know</div>
+<div class="num">05</div>
+<h2>Literature Review</h2>
+<h3>1. Decentralization reshapes composition, not just size</h3>
+<div class="src"><span class="who">Kwon (2003):</span> as Korea decentralized, local governments gained real spending discretion while the central share shrank — decentralization changes who decides, not only how much.</div>
+<div class="src"><span class="who">Park (2022):</span> revenue-side decentralization specifically reduces welfare's share of local budgets and shifts spending from current to capital accounts.</div>
+<h3>2. Political and institutional levers decide which categories move</h3>
+<div class="src"><span class="who">Ha &amp; Lee (2022):</span> politically aligned regions receive larger transfers, and those transfers raise social-welfare and education spending; progressive mayors spend significantly more on both than conservative mayors.</div>
+<div class="src"><span class="who">Lee &amp; Min (2023):</span> participatory budgeting shifts spending toward welfare, health, and transport and away from long-term development.</div>
+<h3>Where they disagree</h3>
+<p>Park finds decentralization <i>shrinks</i> welfare's share; Ha &amp; Lee and Lee &amp; Min find specific channels — subsidies, participation, progressive leadership — that <i>grow</i> it. Welfare's fate depends on which lever is pulled, not on decentralization as one thing.</p>
+<h3>The gap</h3>
+<p>Every study here works at the level of broad categories (welfare vs. development, welfare vs. administration). None tests whether growth in one welfare line — elderly care — comes at the expense of another — youth programs.</p>
+</section>
+
+<section class="slide" data-i="5">
+<div class="tag">Theory</div>
+<div class="num">06</div>
+<h2>Theory and Hypotheses</h2>
+<p><b>Mechanism:</b> Elderly-care spending is largely non-discretionary — tied to statutory welfare obligations, often co-financed with the central government. Youth-program spending is comparatively discretionary. Municipal budgets are fixed in a given year. When a non-discretionary category grows faster than the total budget, the squeeze falls on flexible lines — youth programs among them.</p>
+<div class="hyp"><b>H1:</b> Municipalities with a larger rise in elderly-care spending, 2015–2023, saw a larger fall in youth-program funding.<br><b>H0:</b> Changes in elderly-care spending are unrelated to changes in youth-program funding.</div>
+<table>
+<tr><th>Independent variable</th><td>Change in elderly-care spending, 2015–2023 (share of municipal budget)</td></tr>
+<tr><th>Dependent variable</th><td>Change in youth-program funding over the same period</td></tr>
+<tr><th>Data</th><td>Panel of municipalities, Local Finance 365 (Ministry of the Interior and Safety)</td></tr>
+<tr><th>Controls</th><td>Revenue decentralization (Park 2022), political ideology of mayor (Ha &amp; Lee 2022), presence of participatory budgeting (Lee &amp; Min 2023), total budget size</td></tr>
+</table>
+</section>
+
+<section class="slide" data-i="6">
+<div class="tag">AI Statement</div>
+<div class="num">07</div>
+<h2>AI Transparency Statement</h2>
+<p>I used AI to help form and narrow the research question, to check that the sources I selected were actually related to the argument I was building, and to plan my schedule for working through the research efficiently. I chose the topic, the sources, and the final claims myself.</p>
+</section>
+
+<section class="slide" data-i="7">
+<div class="tag">Ungraded</div>
+<div class="num">08</div>
+<h2>What Working with AI Helped Me Understand — and What I Still Don't</h2>
+<div class="two">
+<div class="card"><b>Helped me understand</b><span class="fill">— fill in before presenting —</span></div>
+<div class="card"><b>Still don't understand</b><span class="fill">— fill in before presenting —</span></div>
+</div>
+</section>
+
+<section class="slide" data-i="8">
+<div class="tag">Sources</div>
+<div class="num">09</div>
+<h2>References</h2>
+<ol class="refs">
+<li>Ha, E., &amp; Lee, D. W. (2022). Partisanship, fiscal transfers, and social spending in Korea: The politics of partial decentralization. <i>Journal of East Asian Studies, 22</i>(2), 171–200. <a href="https://doi.org/10.1017/jea.2021.33">doi.org/10.1017/jea.2021.33</a></li>
+<li>International Monetary Fund. (2025). <i>World economic outlook: A critical juncture amid policy shifts</i> (pp. 49–75). <a href="https://www.imf.org/-/media/files/publications/weo/2025/april/english/ch2.pdf">imf.org</a></li>
+<li>Korea Fiscal Information Service. (n.d.). <i>About KFIS.</i> <a href="https://www.fis.kr/en/about">fis.kr/en/about</a></li>
+<li>Korea JoongAng Daily. (2026, August 12). Gyeonggi's fiscal crisis stems from unchecked spending [Editorial]. <a href="https://www.koreajoongangdaily.com/opinion/gyeonggis-fiscal-crisis-stems-from-unchecked-spending/12819376">koreajoongangdaily.com</a></li>
+<li>Kwon, O. (2003). The effects of fiscal decentralization on public spending: The Korean case. <i>Public Budgeting &amp; Finance, 23</i>(1), 1–20. <a href="https://doi.org/10.1111/j.0275-1100.2003.02304001.x">doi.org/10.1111/j.0275-1100.2003.02304001.x</a></li>
+<li>Lee, D., &amp; Min, S. (2023). Participatory budgeting and the pattern of local government spending: Evidence from South Korea. <i>European Journal of Political Economy, 76</i>, 102235. <a href="https://doi.org/10.1016/j.ejpoleco.2022.102235">doi.org/10.1016/j.ejpoleco.2022.102235</a></li>
+<li>Ministry of the Interior and Safety. (n.d.). <i>Local Finance 365 (지방재정365)</i> [Data portal]. <a href="https://www.lofin365.go.kr">lofin365.go.kr</a></li>
+<li>Ministry of the Interior and Safety. (n.d.). <i>Public data portal (data.go.kr)</i> [Data set repository]. <a href="https://www.data.go.kr">data.go.kr</a></li>
+<li>Park, J. (2022). Fiscal decentralization and the composition of local government expenditure: Evidence from South Korea. <i>Public Finance Review, 50</i>(1), 62–90. <a href="https://doi.org/10.1177/10911421221093142">doi.org/10.1177/10911421221093142</a></li>
+<li>The New York Times. (2019, April 27). Running out of children, a South Korea school enrolls illiterate grandmothers. <a href="https://www.nytimes.com/2019/04/27/world/asia/south-korea-school-grandmothers.html">nytimes.com</a></li>
+<li>World Bank. (2024). <i>Age dependency ratio (% of working-age population)</i> [Data set]. <a href="https://data.worldbank.org/indicator/SP.POP.DPND">data.worldbank.org</a></li>
+<li>World Bank. (2023). <i>World development report 2023: Migrants, refugees, and societies.</i> <a href="https://www.worldbank.org/en/publication/wdr2023">worldbank.org</a></li>
+<li>Yoon, M. (2025, September 7). State welfare spending to reach W237tr by 2029: report. <i>The Korea Herald.</i> <a href="https://www.koreaherald.com/article/10570197">koreaherald.com</a></li>
+</ol>
+</section>
+
+<div class="nav">
+<button id="prev">Back</button>
+<span class="counter" id="counter">1 / 9</span>
+<button id="next">Next</button>
+</div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+let i=0;
+const prev=document.getElementById('prev'),next=document.getElementById('next'),counter=document.getElementById('counter');
+function render(){slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));counter.textContent=(i+1)+' / '+slides.length;prev.disabled=i===0;next.disabled=i===slides.length-1;}
+prev.onclick=()=>{if(i>0){i--;render();}};
+next.onclick=()=>{if(i<slides.length-1){i++;render();}};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next.onclick();if(e.key==='ArrowLeft')prev.onclick();});
+render();
+</script>
+</body>
+</html>
